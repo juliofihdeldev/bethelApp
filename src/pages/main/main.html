@@ -1,0 +1,85 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar color="light">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Accueil</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="txtLogo">
+    <div class="txt">
+      Now Live
+    </div>
+    <div class="logo">
+      <img width="200" src="../../assets/imgs/logo_home.png" alt="" />
+    </div>
+  </div>
+  <ion-list>
+    <ion-item color="secondary" (click)="openOtherPage('audio')">
+      <ion-thumbnail item-start>
+        <div class="img">  
+          <img src="../../assets/icon/radio.png" alt="" />
+        </div>
+      </ion-thumbnail>
+      <h2>Radio Motivation en direct</h2>
+      <p>
+        <button ion-button>Live</button>
+      </p>
+      <ion-icon name="more" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item color="secondary" (click)="openOtherPage('video')">
+      <ion-thumbnail item-start>
+        <div class="imgM">  
+          <img src="../../assets/icon/tv.png" alt="" />
+        </div>
+      </ion-thumbnail>
+      <h2>Télé Motivation en direct</h2>
+      <p>
+        <button ion-button>Live</button>
+      </p>
+      <ion-icon name="more" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item color="secondary" (click)="openOtherPage('donate')">
+      <ion-thumbnail item-start>
+        <div class="imgM">  
+          <img src="../../assets/icon/donate.png" alt="" />
+        </div>
+      </ion-thumbnail>
+      <h2>Donate to Radio TV Motivation</h2>
+      <p>
+        <button ion-button>Live</button>
+      </p>
+      <ion-icon name="more" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-card color="secondary">
+    <ion-card-header>
+      Social network
+    </ion-card-header>
+    <ion-list color="secondary">
+      <button ion-item color="secondary">
+        <ion-icon name="logo-facebook" item-start></ion-icon>
+        Facebook
+      </button>
+      <button ion-item color="secondary">
+        <ion-icon name="logo-twitter" item-start></ion-icon>
+        Twitter
+      </button>
+      <button ion-item color="secondary" color="secondary">
+        <ion-icon name="logo-instagram" item-start></ion-icon>
+        Instagram
+      </button>
+    </ion-list>
+  </ion-card>
+</ion-content>

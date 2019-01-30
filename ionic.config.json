@@ -1,0 +1,7 @@
+{
+  "name": "MotivationFM",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
