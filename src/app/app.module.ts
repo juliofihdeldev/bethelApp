@@ -1,29 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { BrowserModule } from "@angular/platform-browser";
+import { ErrorHandler, NgModule } from "@angular/core";
+import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { MainPage } from '../pages/main/main';
-import { ListPage } from '../pages/list/list';
+import { MyApp } from "./app.component";
+import { HomePage } from "../pages/home/home";
+import { MainPage } from "../pages/main/main";
+import { ListPage } from "../pages/list/list";
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { TabsPage } from '../pages/tabs/tabs';
+import { AboutPage } from "../pages/about/about";
+import { ContactPage } from "../pages/contact/contact";
+import { TabsPage } from "../pages/tabs/tabs";
 
-import { AudioPage } from '../pages/audio/audio';
-import { VideoPage } from '../pages/video/video';
-import { DonatePage } from '../pages/donate/donate';
+import { AudioPage } from "../pages/audio/audio";
+import { VideoPage } from "../pages/video/video";
+import { DonatePage } from "../pages/donate/donate";
 
-import { LibraryPage } from '../pages/library/library';
-import { LastestPage } from '../pages/lastest/lastest';
-import { SettingsPage } from '../pages/settings/settings';
+import { LibraryPage } from "../pages/library/library";
+import { LastestPage } from "../pages/lastest/lastest";
+import { SettingsPage } from "../pages/settings/settings";
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { HttpClientModule } from '@angular/common/http';
-import { Facebook } from '@ionic-native/facebook';
-import { Media } from '@ionic-native/media';
+import { StatusBar } from "@ionic-native/status-bar";
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { HttpClientModule } from "@angular/common/http";
+
+import { Media } from "@ionic-native/media";
 
 /*
 Runtime Error
@@ -36,7 +36,6 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
   StaticInjectorError(Platform: core)[Http -> ConnectionBackend]: 
     NullInjectorError: No provider for ConnectionBackend!
 */
-
 
 @NgModule({
   declarations: [
@@ -55,11 +54,7 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     ContactPage,
     TabsPage
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-  ],
+  imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -77,9 +72,8 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     StatusBar,
     SplashScreen,
     HttpClientModule,
-    Facebook,
     Media,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule {}
