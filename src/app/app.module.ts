@@ -23,6 +23,9 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { HttpClientModule } from "@angular/common/http";
 
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+
+
 import { Media } from "@ionic-native/media";
 
 /*
@@ -49,7 +52,6 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     LibraryPage,
     LastestPage,
     SettingsPage,
-
     AboutPage,
     ContactPage,
     TabsPage
@@ -66,13 +68,15 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     DonatePage,
     LibraryPage,
     LastestPage,
-    SettingsPage
+    SettingsPage,
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
     HttpClientModule,
     Media,
+    YoutubeVideoPlayer,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

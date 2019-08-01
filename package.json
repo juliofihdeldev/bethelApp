@@ -24,6 +24,7 @@
     "@ionic-native/media": "^4.19.0",
     "@ionic-native/splash-screen": "~4.18.0",
     "@ionic-native/status-bar": "~4.18.0",
+    "@ionic-native/youtube-video-player": "^5.10.0",
     "@ionic/storage": "2.2.0",
     "cordova-android": "7.1.4",
     "cordova-ios": "4.5.5",
@@ -35,6 +36,7 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-plugin-youtube-video-player": "2.3.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -58,7 +60,8 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-media": {
         "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
-      }
+      },
+      "cordova-plugin-youtube-video-player": {}
     },
     "platforms": [
       "android",
