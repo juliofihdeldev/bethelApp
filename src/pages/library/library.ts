@@ -50,7 +50,6 @@ export class LibraryPage {
           this.posts = data["data"];
         },
         err => {
-          // alert(err);
           this.loader.dismiss();
         }
       );

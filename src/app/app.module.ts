@@ -23,6 +23,9 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { HttpClientModule } from "@angular/common/http";
 
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
+
 
 import { Media } from "@ionic-native/media";
 
@@ -54,8 +57,10 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     ContactPage,
     TabsPage
   ],
-  imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(MyApp)],
-  bootstrap: [IonicApp],
+  imports: [HttpClientModule, BrowserModule,
+    
+    IonicModule.forRoot(MyApp)],
+  bootstrap: [IonicApp], 
   entryComponents: [
     MyApp,
 
@@ -74,6 +79,7 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
     SplashScreen,
     HttpClientModule,
     Media,
+    InAppBrowser,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

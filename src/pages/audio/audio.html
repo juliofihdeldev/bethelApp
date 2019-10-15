@@ -6,38 +6,28 @@
 -->
 <ion-header no-border>
   <ion-navbar color="light">
-    <ion-title>Motivation F.M</ion-title>
+    <ion-title> Bethel F.M</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
   <ion-card color="secondary">
     <img src="../../assets/imgs/back.png"/>
   </ion-card>
+
+  <!-- 
   <ion-item color="light">
-    <ion-range [(ngModel)]="brightness">
+    <ion-range  [(ngModel)] ="position" 
+      (ionChange)="controlProgressBar($event)"
+      min="0" max="100">
       
     </ion-range>
-  </ion-item>
+  </ion-item> 
+  -->
+  
   <div class="playBar">
-    <div class="icon shuffle">
-      <img class="img" src="../../assets/icon/shuffle.png" />
-    </div>
-    <div class="icon back">
-      <img class="img" src="../../assets/icon/prev.png" />
-    </div>
     <div  class="play" (click)="PlayPause()">
       <img id="playPause" class="imgP" src="../../assets/icon/pause.png" />
     </div>
-    <div class="icon next">
-      <img class="img" src="../../assets/icon/next.png" />
-    </div>
-    <div class="icon volume">
-      <img class="img" src="../../assets/icon/volume.png" />
-    </div>
   </div>
   
-  <div class="player">
-    <audio id="audioPlayer" src="http://node-11.zeno.fm/cty22fw7n6duv?rj-ttl=5&rj-token=AAABbEsGqHx_PIQwcLzuyvayjIacE1JKGCiS2TV8Yra2EqvxlD5w1w" autoplay controls></audio>
-  </div>
- 
 </ion-content>

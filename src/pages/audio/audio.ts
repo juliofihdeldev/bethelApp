@@ -17,71 +17,71 @@ import { Media, MediaObject } from '@ionic-native/media';
 export class AudioPage 
 {
   constructor(public navCtrl: NavController, public navParams: NavParams, private media: Media) {}
-
-  file: MediaObject = this.media.create('http://stream.zenolive.com/rk3zd01n3reuv');
-
+  url: any = "http://stream.zenolive.com/cty22fw7n6duv";
+  testUrl: any = "http://programmerguru.com/android-tutorial/wp-content/uploads/2013/04/hosannatelugu.mp3";
+  file: MediaObject = this.media.create(this.url);
+  isAudioPlaying: boolean = false;
+  position: number;
+	duration: number;
   ionViewDidLoad() 
   {
     // Create a Media instance.  Expects path to file or url as argument
     // We can optionally pass a second argument to track the status of the media
 
     // play the file
-
     this.file.play();
 
-    /*
-    this.file.onSuccess.subscribe(data =>
-    {
-      alert(data);  
-    
-    }, err=>
-    {
-      alert(err);
-    });
-    /*
-    // to listen to plugin events:
-    file.onStatusUpdate.subscribe(status => console.log(status)); // fires when file status changes
+    // setInterval(function () {
+    //   this.file.getCurrentPosition().then((position) => {
+    //     this.position = position;
 
-    file.onSuccess.subscribe(() => console.log('Action is successful'));
+    //   });
+    // }, 1000);
 
-    file.onError.subscribe(error => console.log('Error!', error));
-
-    // play the file
-    file.play();
-
-    // pause the file
-    file.pause();
-
-    // get current playback position
-    file.getCurrentPosition().then((position) => {
-      console.log(position);
-    });
-
-    // get file duration
-    let duration = file.getDuration();
-    console.log(duration);
-
-    // skip to 10 seconds (expects int value in ms)
-    file.seekTo(10000);
-
-    // stop playing the file
-    file.stop();
-
-    // release the native audio resource
-    // Platform Quirks:
-    // iOS simply create a new instance and the old one will be overwritten
-    // Android you must call release() to destroy instances of media when you are done
-    file.release();
-    */
   }
 
-  PlayPause(param)
+  PlayPause()
   {
-    var playPause = document.getElementById('playPause');
-    
-    playPause.setAttribute('src', '../../assets/icon/play.png');
-    playPause.setAttribute('class', 'imgPS');
+    var playPause = document.getElementById('playPause'); 
 
-    this.file.stop();
+    console.log("ssee", this.file.getDuration());
+
+    if( playPause.className != "imgP" ) {
+      this.file.play();
+      playPause.setAttribute('src', '../../assets/icon/pause.png');
+      playPause.setAttribute('class', 'imgP');
+      this.isAudioPlaying = true;
+    } else {
+      playPause.setAttribute('src', '../../assets/icon/play.png');
+      playPause.setAttribute('class', 'imgPS');
+      this.isAudioPlaying = false;
+      this.file.pause();
+    }
   }
+
+  // controlProgressBar(event) {
+	// 	var self = this;
+	// 	if(this.isAudioPlaying == true ) {
+	// 	    setInterval(function () {
+  //         self.file.getCurrentPosition().then((position) => {
+  //           self.position = position;
+  //         });
+	// 	    }, 1000);
+	// 	}		
+	// }
+
+
+  // controlSeconds(type) {
+	// 	this.file.getCurrentPosition().then((position) => {
+	// 		var number = Number.parseInt(position) * 1000;
+	// 		switch(type){
+	// 			case 'back':
+	// 				this.file.seekTo(number - 15000);
+	// 				break;
+	// 			case 'forward':
+	// 				this.file.seekTo(number + 15000);
+	// 				break;
+	// 		}
+	// 	});
+	// }
 }
