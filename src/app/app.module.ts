@@ -63,7 +63,6 @@ Error: StaticInjectorError(AppModule)[Http -> ConnectionBackend]:
   bootstrap: [IonicApp], 
   entryComponents: [
     MyApp,
-
     ListPage,
     MainPage,
     AudioPage,
