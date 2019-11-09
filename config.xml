@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="ht.bethel.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Bethel App </name>
+    <name>Bethel App</name>
     <description> Bethel App  </description>
     <author email="hi@ionicframework" href="http://ionicframework.com/"> Bethel team </author>
     <content src="index.html" />
@@ -88,5 +88,9 @@
     <plugin name="cordova-plugin-camera" spec="4.0.3" />
     <plugin name="cordova-plugin-media" spec="5.0.2" />
     <engine name="android" spec="7.1.4" />
-    <engine name="ios" spec="4.5.5" />
+    <allow-navigation href="http://localhost:8080/*" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
 </widget>

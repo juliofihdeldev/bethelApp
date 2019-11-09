@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,ModalController } from 'ionic-angular';
 
 import { VideoPage } from '../../pages/video/video';
 import { AudioPage } from '../../pages/audio/audio';
@@ -24,7 +24,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 export class MainPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public iab: InAppBrowser) {
+    public iab: InAppBrowser, public modalController: ModalController) {
   }
 
   ionViewDidLoad() 
@@ -58,11 +58,24 @@ export class MainPage {
     else if(page == "instagram")
     {
       this.broswer = this.iab.create('https://www.instagram.com/?hl=fr');
-
+    }
+    else if(page == "copy")
+    {
+      this.navCtrl.push(DonatePage);
+      // navigate to page 
+    //  this.presentModal()
     }
     else {
       return null
     }
 
   }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: DonatePage
+    });
+    return await modal.present();
+  }
 }
+
