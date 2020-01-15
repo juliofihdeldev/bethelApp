@@ -19,6 +19,7 @@ export class AudioPage
   constructor(public navCtrl: NavController, public navParams: NavParams, private media: Media) {}
   url: any = "http://stream.zenolive.com/cty22fw7n6duv";
   testUrl: any = "http://programmerguru.com/android-tutorial/wp-content/uploads/2013/04/hosannatelugu.mp3";
+
   file: MediaObject = this.media.create(this.url);
   isAudioPlaying: boolean = false;
   position: number;
@@ -30,22 +31,20 @@ export class AudioPage
 
     // play the file
     this.file.play();
-
     // setInterval(function () {
     //   this.file.getCurrentPosition().then((position) => {
     //     this.position = position;
-
     //   });
-    // }, 1000);
+    // }, 1000)
 
   }
+
+  
 
   PlayPause()
   {
     var playPause = document.getElementById('playPause'); 
-
     console.log("ssee", this.file.getDuration());
-
     if( playPause.className != "imgP" ) {
       this.file.play();
       playPause.setAttribute('src', '../../assets/icon/pause.png');

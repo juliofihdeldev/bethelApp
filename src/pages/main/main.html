@@ -29,9 +29,9 @@
           <img src="../../assets/icon/radio.png" alt="" />
         </div>
       </ion-thumbnail>
-      <h2>Radio Motivation en direct</h2>
+      <h2>Radio Bethel en direct</h2>
       <p>
-        <button ion-button>Live</button>
+        <button ion-button> Live </button>
       </p>
       <ion-icon name="more" item-end></ion-icon>
     </ion-item>
@@ -43,7 +43,7 @@
           <img src="../../assets/icon/tv.png" alt="" />
         </div>
       </ion-thumbnail>
-      <h2>Télé Motivation en direct</h2>
+      <h2>Télé Bethel en direct</h2>
       <p>
         <button ion-button>Live</button>
       </p>
@@ -71,23 +71,25 @@
     </ion-card-header>
     <ion-list color="secondary">
       <button ion-item color="secondary" (click)="openOtherPage('facebook')">
-        <ion-icon name="logo-facebook" item-start></ion-icon>
+        <ion-icon name="logo-facebook" item-start> </ion-icon>
         Facebook
       </button>
       <button ion-item color="secondary" (click)="openOtherPage('twitter')">
-        <ion-icon name="logo-twitter" item-start></ion-icon>
+        <ion-icon name="logo-twitter" item-start> </ion-icon>
         Twitter
       </button>
-      <button ion-item color="secondary" color="secondary" (click)="openOtherPage('instagram')">
-        <ion-icon name="logo-instagram" item-start></ion-icon>
+      <button ion-item color="secondary" color="secondary" (click) ="openOtherPage('instagram')">
+        <ion-icon name="logo-instagram" item-start> </ion-icon>
         Instagram
       </button>
-    </ion-list>
-  </ion-card>
-    <button ion-item color="secondary" color="secondary" (click)="openOtherPage('copy')">
-        <ion-icon name="ios-copy-outline" item-start 
-     
-        ></ion-icon>
-        Copyright
+      <button ion-item color="secondary" color="secondary" (click) ="openOtherPage('youtube')">
+      <ion-icon name="logo-youtube" item-start> </ion-icon>
+        Youtube
       </button>
+  </ion-list>
+  </ion-card>
+    <button ion-item color="secondary" color="secondary" (click) ="openOtherPage('copy')">
+      <ion-icon name="ios-copy-outline" item-start> </ion-icon>
+      Copyright
+    </button>
 </ion-content>
