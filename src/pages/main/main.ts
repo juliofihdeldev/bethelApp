@@ -55,6 +55,10 @@ export class MainPage {
     {
       this.broswer = this.iab.create('https://twitter.com/', '_blank', 'location=yes');
     }
+    else if(page == "youtube")
+    {
+      this.broswer = this.iab.create('https://www.youtube.com/channel/UCwCfMJjPkrwKDiNbMoHU5FQ?view_as=subscriber', '_blank', 'location=yes');
+    }
     else if(page == "instagram")
     {
       this.broswer = this.iab.create('https://www.instagram.com/?hl=fr');
